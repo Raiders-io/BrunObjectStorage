@@ -1,11 +1,11 @@
 meta {
-  name: Logout
+  name: Storage list
   type: http
-  seq: 3
+  seq: 5
 }
 
-post {
-  url: http://127.0.0.1:3333/api/v1/account/logout
+get {
+  url: http://127.0.0.1:3333/storage/objects/
   body: none
   auth: inherit
 }

@@ -1,13 +1,17 @@
 meta {
-  name: Logout
+  name: Delete Object
   type: http
-  seq: 3
+  seq: 11
 }
 
-post {
-  url: http://127.0.0.1:3333/api/v1/account/logout
+delete {
+  url: http://127.0.0.1:3333/storage/objects/:id
   body: none
   auth: inherit
+}
+
+params:path {
+  id: 
 }
 
 headers {
