@@ -1,17 +1,17 @@
 meta {
-  name: App hello world
+  name: Retrieve Quota
   type: http
-  seq: 6
+  seq: 11
 }
 
 get {
-  url: http://127.0.0.1:3334/
+  url: http://127.0.0.1:3334/quota
   body: none
   auth: inherit
 }
 
 headers {
-  ~Authorization: Bearer [token]
+  Authorization: Bearer [token]
 }
 
 settings {
