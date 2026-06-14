@@ -1,0 +1,25 @@
+meta {
+  name: createObject
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://127.0.0.1:3334/storage/objects/
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer [token]
+}
+
+body:multipart-form {
+  ~files[]: 
+  ~files[]: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

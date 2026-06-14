@@ -1,17 +1,17 @@
 meta {
-  name: App hello world
+  name: Profile
   type: http
-  seq: 6
+  seq: 3
 }
 
 get {
-  url: http://127.0.0.1:3334/
+  url: http://127.0.0.1:3334/api/v1/account/profile
   body: none
   auth: inherit
 }
 
 headers {
-  ~Authorization: Bearer [token]
+  Authorization: Bearer [token]
 }
 
 settings {

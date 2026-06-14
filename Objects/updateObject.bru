@@ -1,21 +1,26 @@
 meta {
-  name: Delete Object
+  name: updateObject
   type: http
-  seq: 10
+  seq: 5
 }
 
-delete {
+put {
   url: http://127.0.0.1:3334/storage/objects/:id
-  body: none
+  body: multipartForm
   auth: inherit
 }
 
 params:path {
-  id: 
+  id: [file_name]
 }
 
 headers {
   Authorization: Bearer [token]
+}
+
+body:multipart-form {
+  files[]: 
+  files[]: 
 }
 
 settings {

@@ -2,6 +2,8 @@
 
 ## Commands
 
+### Setup commands
+
 Define the port of the API with a var, and with a command, you can change all the URL at once.
 
 ```sh
@@ -19,11 +21,21 @@ export API_TOKEN=placeholder
 ```
 
 ```sh
-sed -i -E "s|(Bearer ).*|\1${API_TOKEN}|" *.bru
+sed -i -E "s|(Bearer ).*|\1${API_TOKEN}|" ./**/*.bru
 ```
+
+### Reset/Revert to default
+
+Please avoid publishing secrets as tokens, files (even paths), identities or anything else.
 
 To revert the command and not publish secrets, you can revert with this command :
 
 ```sh
-sed -i -E "s|(Bearer ).*|\1[token]|" *.bru
+sed -i -E "s|(Bearer ).*|\1[token]|" ./**/*.bru
+```
+
+To remove files from forms :
+
+```sh
+sed -i -E "s|(files\[\]: ).*|\1|" Objects/createObject.bru
 ```

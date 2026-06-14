@@ -1,11 +1,11 @@
 meta {
-  name: Retrieve Quota
+  name: Logout
   type: http
-  seq: 11
+  seq: 4
 }
 
-get {
-  url: http://127.0.0.1:3334/quota
+post {
+  url: http://127.0.0.1:3334/api/v1/account/logout
   body: none
   auth: inherit
 }

@@ -1,17 +1,24 @@
 meta {
-  name: Storage list
+  name: bulkDeleteObjects
   type: http
-  seq: 5
+  seq: 8
 }
 
-get {
+delete {
   url: http://127.0.0.1:3334/storage/objects/
-  body: none
+  body: json
   auth: inherit
 }
 
 headers {
   Authorization: Bearer [token]
+}
+
+body:json {
+  {
+    "ids": ["[file_name]", "[file_name2]"]
+  }
+  
 }
 
 settings {

@@ -1,17 +1,13 @@
 meta {
-  name: Put Object
+  name: listObjects
   type: http
-  seq: 8
+  seq: 2
 }
 
-put {
-  url: http://127.0.0.1:3334/storage/objects/:id
+get {
+  url: http://127.0.0.1:3334/storage/objects/
   body: none
   auth: inherit
-}
-
-params:path {
-  id: 
 }
 
 headers {
