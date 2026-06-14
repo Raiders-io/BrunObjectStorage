@@ -28,14 +28,9 @@ sed -i -E "s|(Bearer ).*|\1${API_TOKEN}|" ./**/*.bru
 
 Please avoid publishing secrets as tokens, files (even paths), identities or anything else.
 
-To revert the command and not publish secrets, you can revert with this command :
+You can use the following command to reset everything in this repository :
 
 ```sh
-sed -i -E "s|(Bearer ).*|\1[token]|" ./**/*.bru
-```
-
-To remove files from forms :
-
-```sh
-sed -i -E "s|(files\[\]: ).*|\1|" Objects/createObject.bru
+chmod +x ./reset.sh
+./reset.sh
 ```
