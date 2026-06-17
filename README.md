@@ -1,5 +1,10 @@
 # BrunObjectStorage
 
+## Documentation
+
+You can use directly the URL <https://raiders-io.github.io/BrunObjectStorage/> or open this project in Bruno.
+Some Routes might not work in the URL as **opencollection** doesn't support Multipart forms right now (used in createObject).
+
 ## Commands
 
 ### Setup commands
