@@ -5,13 +5,9 @@ meta {
 }
 
 get {
-  url: http://127.0.0.1:3334/quota
+  url: {{PROTOCOL}}://{{HOST}}:{{PORT}}/quota
   body: none
   auth: inherit
-}
-
-headers {
-  Authorization: Bearer [token]
 }
 
 settings {

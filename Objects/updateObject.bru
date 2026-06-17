@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://127.0.0.1:3334/storage/objects/:id
+  url: {{PROTOCOL}}://{{HOST}}:{{PORT}}/storage/objects/:id
   body: multipartForm
   auth: inherit
 }
@@ -14,13 +14,9 @@ params:path {
   id: [file_name]
 }
 
-headers {
-  Authorization: Bearer [token]
-}
-
 body:multipart-form {
-  files[]: 
-  files[]: 
+  file: @file(/home/ppontet/Downloads/arch.md)
+  ~files[]: 
 }
 
 settings {

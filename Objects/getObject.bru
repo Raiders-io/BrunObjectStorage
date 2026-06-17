@@ -5,17 +5,13 @@ meta {
 }
 
 get {
-  url: http://127.0.0.1:3334/storage/objects/:id
+  url: {{PROTOCOL}}://{{HOST}}:{{PORT}}/storage/objects/:id
   body: none
   auth: inherit
 }
 
 params:path {
   id: [file_name]
-}
-
-headers {
-  Authorization: Bearer [token]
 }
 
 settings {

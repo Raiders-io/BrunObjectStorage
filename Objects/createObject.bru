@@ -5,13 +5,9 @@ meta {
 }
 
 post {
-  url: http://127.0.0.1:3334/storage/objects/
+  url: {{PROTOCOL}}://{{HOST}}:{{PORT}}/storage/objects/
   body: multipartForm
   auth: inherit
-}
-
-headers {
-  Authorization: Bearer [token]
 }
 
 body:multipart-form {

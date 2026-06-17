@@ -5,13 +5,9 @@ meta {
 }
 
 get {
-  url: http://127.0.0.1:3334/api/v1/account/profile
+  url: {{PROTOCOL}}://{{HOST}}:{{PORT}}/api/v1/account/profile
   body: none
   auth: inherit
-}
-
-headers {
-  Authorization: Bearer [token]
 }
 
 settings {
