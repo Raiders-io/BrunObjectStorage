@@ -1,0 +1,25 @@
+meta {
+  name: listObjectsFrom
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{PROTOCOL}}://{{HOST}}:{{PORT}}/api/v1/storage/objects/index/:userid
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 1
+  ~limit: 10
+}
+
+params:path {
+  userid: [user_id]
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
